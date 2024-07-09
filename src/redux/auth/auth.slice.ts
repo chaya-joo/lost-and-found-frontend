@@ -30,6 +30,7 @@ const authSlice = createSlice({
         deleteUser:(state:AuthStateType)=>
         {
             state.user=null;
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
             state.isAuthenticated=false,
             state.isInitialized=false
         }

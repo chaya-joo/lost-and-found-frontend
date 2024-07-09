@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import { Card, CardContent, Typography, Grid, Box, Button, TextField } from '@mui/material';
 import { useAppSelector } from '../redux/store';

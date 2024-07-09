@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react';
 import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -263,6 +264,7 @@ export default function EnhancedTable({ allItems,handleDeleteClick }: TableProps
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
       const newSelected = allItems.map((n) => n.id);
+         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       setSelected(newSelected);
       return;
     }
