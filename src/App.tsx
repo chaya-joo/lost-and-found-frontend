@@ -1,4 +1,4 @@
-import { RouterProvider, Routes } from "react-router-dom";
+import { RouterProvider, Routes, HashRouter } from "react-router-dom";
 import { BrowserRouter, Route } from "react-router-dom";
 import { router } from './routes/router'
 // import AppRouter from './routes/router'
@@ -48,7 +48,8 @@ const theme = createTheme({
 const App = () => (
   <Provider store={store} >
     <InitializedAuth />
-    <BrowserRouter basename="/lost-and-found-frontend">
+    {/* <BrowserRouter basename="/lost-and-found-frontend"> */}
+    <HashRouter>
       <Routes>
         <Route path="/" element={<MainLayout />} />
         <Route path="/about" element={<About />} />
@@ -60,7 +61,8 @@ const App = () => (
         <Route path="/profile" element={<><CustomLayout /><OutlinedCard /></>} />
         <Route path="/requests" element={<><CustomLayout /><AllRequests /></>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
+    {/* </BrowserRouter> */}
   </Provider>
 );
 export default App;
